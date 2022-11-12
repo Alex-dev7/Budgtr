@@ -1,5 +1,7 @@
 require('dotenv').config()
 const express = require('express')
+const Budget = require('./models/budget')
+const helpers = require('./ejs-helpers')
 
 const app = express()
 
@@ -9,7 +11,10 @@ app.use("/static", express.static("public"))
 //-----------Index-------------
 app.get("/", (req, res) => res.redirect("/budgets"))
 app.get('/budgets', (req, res) => {
-    res.render('index.ejs')
+    res.render('index.ejs', {
+        Budget,
+        helpers
+    })
 
 })
 
