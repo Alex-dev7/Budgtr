@@ -21,6 +21,11 @@ app.get('/budgets', (req, res) => {
 //-----------Show-------------
 
 app.get('/budgets/:index', (req, res) => {
+    
+    res.render('show.ejs', {
+        name : req.params.index
+       
+    })
 
 })
 
