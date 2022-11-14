@@ -6,9 +6,9 @@
     <div class="container">
         <h1>Budgtr</h1>
         <table>
-          <% Budget.forEach(index => { %>
+          <% Budget.forEach((element, index) => { %>
             
-            <tr><%- helpers.generateTable(index) %> </tr>
+            <tr><%- helpers.createTableData(element, index) %> </tr>
             
           <%})%>
         </table>

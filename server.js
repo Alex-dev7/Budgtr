@@ -23,7 +23,12 @@ app.get('/budgets', (req, res) => {
 app.get('/budgets/:index', (req, res) => {
     
     res.render('show.ejs', {
-        name : req.params.index
+        
+        Budget,
+        item: Budget[req.params.index],
+        helpers
+
+
        
     })
 

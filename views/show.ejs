@@ -3,8 +3,10 @@
     <%- include('./partials/head.ejs') %>
 <body>
     <div class="container">
-        <h1><%= name%></h1>
-        <button><a href="/budgets">Back</a></button>
+        <h1><%= item.name%></h1>
+        <a href="/budgets"><button>Back</button></a>
+       
+        <%- helpers.createShowData(item) %>
     </div>
     
 
