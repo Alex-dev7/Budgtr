@@ -20,8 +20,8 @@ function createShowData(obj) {
     const data= []
     for(let key in obj) {
         data.push( `
-        <h4>${key}</h4>
-        <p>${obj[key]}</p>
+        <th>${key}:</th>
+        <td><br>${obj[key]}</td>
         `)
         // console.log(key + " : " + obj[key])
     }

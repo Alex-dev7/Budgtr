@@ -6,7 +6,12 @@ const helpers = require('./ejs-helpers')
 const app = express()
 
 
+//---------middleware----------
+app.use(express.urlencoded({extended: true})) // parse data from form submission into req.body
 app.use("/static", express.static("public"))
+
+
+
 
 //-----------Index-------------
 app.get("/", (req, res) => res.redirect("/budgets"))
@@ -20,21 +25,25 @@ app.get('/budgets', (req, res) => {
 
 
 
-
 //-----------New-------------
 
 app.get('/budgets/new', (req, res) => {
-    res.render('new.ejs')
 
+    res.render('new.ejs')
+ 
 })
+
 
 
 //-----------Create-------------
 
 app.post('/budgets', (req, res) => {
+    
+    Budget.push(req.body)
 
+    res.redirect('/budgets')
+    
 })
-
 
 
 //-----------Show-------------
