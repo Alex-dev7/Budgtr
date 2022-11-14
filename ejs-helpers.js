@@ -28,9 +28,20 @@ function createShowData(obj) {
     return data.join(' ')
 }
 
+//function that calculates the total amount
+function calculateTotal(arr) {
+    let total = 0
+    for(let item of arr) {
+        total += item.amount
+    }
+    // console.log(total)
+    return total
+}
+
 
 
 module.exports = {
     createTableData,
-    createShowData
+    createShowData,
+    calculateTotal
 }

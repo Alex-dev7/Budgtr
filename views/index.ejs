@@ -5,6 +5,8 @@
     
     <div class="container index">
         <h1>Budgtr</h1>
+        <h4>Bank Account: <span><%- helpers.calculateTotal(Budget) %>  </span></h4>
+        
         <table>
           <% Budget.forEach((element, index) => { %>
             
