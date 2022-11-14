@@ -18,6 +18,25 @@ app.get('/budgets', (req, res) => {
 
 })
 
+
+
+
+//-----------New-------------
+
+app.get('/budgets/new', (req, res) => {
+    res.render('new.ejs')
+
+})
+
+
+//-----------Create-------------
+
+app.post('/budgets', (req, res) => {
+
+})
+
+
+
 //-----------Show-------------
 
 app.get('/budgets/:index', (req, res) => {
@@ -31,20 +50,6 @@ app.get('/budgets/:index', (req, res) => {
 
        
     })
-
-})
-
-
-//-----------New-------------
-
-app.get('budgets/new', (req, res) => {
-
-})
-
-
-//-----------Create-------------
-
-app.post('/budgets', (req, res) => {
 
 })
 
