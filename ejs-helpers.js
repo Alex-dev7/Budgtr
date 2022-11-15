@@ -1,3 +1,5 @@
+const { push } = require("./models/budget")
+
 //function that iterates over an object and creates <td></td> for each key value
 function createTableData(obj, index) {
         const table = []
@@ -29,11 +31,35 @@ function createTableData(obj, index) {
 function createShowData(obj) {
     const data= []
     for(let key in obj) {
-        data.push( `
-        <th>${key}:</th>
-        <td><br>${obj[key]}</td>
-        `)
+        if (key === 'tags') {
+        
+            const liItem = obj[key]
+            
+           data.push(`<th>${key}</th>`)
+
+
+               for(let i of liItem) {
+               data.push(`
+               <td>
+               <ul>
+               <li>${i}</li>
+               </ul>
+               </td>
+               
+               
+               `)}
+        
+                
+            
+            console.log(obj[key])
+        } else {
+              data.push( `
+              <th>${key}:</th>
+              <td><br>${obj[key]}</td>
+              `)
         // console.log(key + " : " + obj[key])
+        }
+      
     }
     return data.join(' ')
 }
