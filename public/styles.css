@@ -9,4 +9,21 @@ body {
     align-items: center;
 }
 
-
+.green {
+    background-color: rgba(50, 185, 133, 0.614);
+    
+}
+.red {
+    background-color: rgba(206, 58, 58, 0.76);
+ 
+}
+.neutral { 
+    background-color: rgba(105, 97, 97, 0.209);
+    
+}
+table {
+    min-width:30vw;
+}
+table tr:hover {
+    background-color: rgba(0, 0, 0, 0.086);
+}
