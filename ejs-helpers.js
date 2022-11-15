@@ -6,7 +6,7 @@ function createTableData(obj, index) {
         for(let key in obj) {
             //'name' key will display as <a> tag with the href of its own index which will be used in SHOW route
             if (key === 'name'){
-                table.push(`<td><a href="/budgets/${index}" >${obj[key]}</a></td>`) 
+                table.push(`<td><a href="/budgets/${index}" >${obj[key]}</td>`) 
             } else if (key === 'date') {
                   table.push(`<td>${obj[key]}</td>`) 
             } else if(key === 'amount') {
@@ -35,7 +35,7 @@ function createShowData(obj) {
         
             const liItem = obj[key]
             
-           data.push(`<th>${key}</th>`)
+            data.push(`<th>${key}</th>`)
 
 
                for(let i of liItem) {
@@ -45,17 +45,13 @@ function createShowData(obj) {
                <li>${i}</li>
                </ul>
                </td>
-               
-               
                `)}
         
-                
-            
             console.log(obj[key])
         } else {
               data.push( `
-              <th>${key}:</th>
-              <td><br>${obj[key]}</td>
+              <tr><th>${key}:</th></tr>
+              <tr><td>${obj[key]}</td></tr>
               `)
         // console.log(key + " : " + obj[key])
         }
@@ -73,8 +69,6 @@ function calculateTotal(arr) {
         total = total + parseInt(item.amount)
        
         }
-     
-   
     // console.log(total)
     return total
 }
