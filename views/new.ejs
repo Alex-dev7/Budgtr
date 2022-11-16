@@ -4,20 +4,19 @@
 <body>
     <div class="container">
         <h1>Add New</h1>
-        <form action="/budgets" method="POST">
-            <input type="text" name="date" placeholder="Date"><br>
-            <input type="text" name="name" placeholder="Name"><br>
-            <input type="number" name="amount" placeholder="Amount"><br>
-            <input type="text" name="from" placeholder="From"><br>
-             <input type="text" name="tags[]" placeholder="tag"><button class="tagButton">+</button><br> 
-             <div class="tagContainer">
-
-             </div>
+        <div class="formContainer">
+              <form action="/budgets" method="POST">
+                   <input type="text" name="date" placeholder="Date"><br>
+                   <input type="text" name="name" placeholder="Name"><br>
+                   <input type="number" name="amount" placeholder="Amount"><br>
+                   <input type="text" name="from" placeholder="From"><br>
+                   <input type="text" name="tags[]"  placeholder="tag"><button class="tagButton">+</button><br> 
+                   <div class="tagContainer"> </div>
+                   <input type="submit" value="Submit" >
             
-            
-            <input type="submit" value="Submit" >
-            
-        </form>
+              </form>
+        </div>
+      
 
 
     </div>

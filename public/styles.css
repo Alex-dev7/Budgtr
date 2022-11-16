@@ -1,14 +1,30 @@
 body {
     background-color: antiquewhite;
-    
+  
 }
 .container {
+    margin-top: 3%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-
+.tableContainer {
+    border: 1px solid black;
+    padding: 2rem;
+}
+.formContainer {
+    width: 40%;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+}
+h1 {
+    border-bottom: 1px solid black;
+    margin: 3rem;
+}
 .green {
     background-color: rgba(50, 185, 133, 0.614);
     
@@ -21,6 +37,7 @@ body {
     background-color: rgba(105, 97, 97, 0.209);
     
 }
+
 table {
     min-width:30vw;
 }
@@ -29,17 +46,9 @@ table tr:hover {
    
 }
 .tagButton {
-    position: absolute;
-   margin-left: 1rem;
- 
-    font-size: 2rem;
-    text-align: center;
-}
-.tagButton:hover {
-    font-size: 2.6rem;
-
-}
-.tagButton:active {
-    font-size: 2rem;
+    width: 4rem;
+    margin-left: 2rem;
+    padding: 0; 
+  
 }
 

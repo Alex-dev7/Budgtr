@@ -5,12 +5,16 @@
     <div class="container">
         <h1><%= item.name%></h1>
         <a href="/budgets"><button>Back</button></a>
+       <div class="tableContainer">
+              <table>
+            
+                 <%- helpers.createShowData(item) %>
+            
+             </table>
        
-        <table>
-            
-                <%- helpers.createShowData(item) %>
-            
-        </table>
+
+
+       </div>
        
     </div>
     
