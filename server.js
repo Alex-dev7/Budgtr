@@ -39,11 +39,10 @@ app.get('/budgets/new', (req, res) => {
 //-----------Create-------------
 
 app.post('/budgets', (req, res) => {
-    
+    //pushing new obj to Budget array 
     Budget.push(req.body)
-
+   
     res.redirect('/budgets')
-    
 })
 
 
@@ -62,9 +61,6 @@ app.get('/budgets/:index', (req, res) => {
     })
 
 })
-
-
-
 
 
 const PORT = process.env.PORT || 3030
